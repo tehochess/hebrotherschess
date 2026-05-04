@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — He Brothers Chess</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .photos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr;
+    gap: 14px;
+    margin: 2.5rem 0;
+  }
+  .photo-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    background: var(--cream2);
+    border: 1px solid var(--border);
+  }
+  .photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.3s;
+  }
+  .photo-wrap:hover img { transform: scale(1.02); }
+  .photo-tall { aspect-ratio: 2/3; }
+  .photo-wide { aspect-ratio: 4/3; }
+  .photo-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 2rem 0.9rem 0.7rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    font-size: 11px;
+    color: var(--gold-light);
+    letter-spacing: 0.5px;
+  }
+  .bios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  .bio { border-left: 3px solid var(--gold); padding-left: 1.2rem; }
+  .bio-rating {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 0.7rem;
+    display: block;
+  }
+  .bio p { font-size: 14px; color: var(--muted); line-height: 1.8; }
+  .cred-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+    margin-top: 1.5rem;
+    list-style: none;
+  }
+  .cred-list li {
+    font-size: 14px;
+    color: var(--muted);
+    padding: 0.9rem 1rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .cred-list li::before { content: "♟"; color: var(--gold); flex-shrink: 0; }
+  @media (max-width: 768px) {
+    .photos-grid { grid-template-columns: 1fr 1fr; }
+    .photo-wide { grid-column: span 2; aspect-ratio: 16/9; }
+    .bios { grid-template-columns: 1fr; }
+    .cred-list { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">He Brothers Chess</a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="coaching.html">Coaching</a></li>
+    <li><a href="assessment.html">Assessment</a></li>
+    <li><a href="book.html">Book</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <span class="section-tag">About us</span>
+  <h1>We grew up playing<br>chess here.</h1>
+  <p class="lead">Daniel and Samuel He are identical twins from the Seattle area. We reached National Master through the local tournament circuit — the same scene many of our students are part of. We coached the Redmond High School chess team to the 2017 State Championship and a top-5 finish at Super Nationals. We still compete.</p>
+
+  <div class="photos-grid">
+    <div class="photo-wrap photo-tall">
+      <img src="Photo1.jpg" alt="Samuel He with trophy">
+      <div class="photo-caption">Samuel — WA Open co-champion</div>
+    </div>
+    <div class="photo-wrap photo-tall">
+      <img src="photo_2.jpg" alt="Daniel He with trophy">
+      <div class="photo-caption">Daniel — 2024 WA State Champion</div>
+    </div>
+    <div class="photo-wrap photo-wide">
+      <img src="photo3.jpg" alt="He Brothers over the board">
+      <div class="photo-caption">Over the board</div>
+    </div>
+  </div>
+
+  <div class="bios">
+    <div class="bio">
+      <h3>Daniel He</h3>
+      <span class="bio-rating">NM · USCF 2326 · Blitz 2357</span>
+      <p>2024 Washington State Chess Champion. Natural tactician who spent years building his positional understanding. Sharp, pattern-based approach to coaching.</p>
+    </div>
+    <div class="bio">
+      <h3>Samuel He</h3>
+      <span class="bio-rating">NM · USCF 2274 · Blitz 2266</span>
+      <p>Two-time Washington Open co-champion. Naturally positional player who developed a dynamic, tactical edge over time. Focuses on structure, planning, and opening systems that fit your style.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <span class="section-tag">Credentials</span>
+  <h2>Our background</h2>
+  <ul class="cred-list">
+    <li>Both achieved National Master before age 18</li>
+    <li>Coached Redmond High School to 2017 WA State Team Championship</li>
+    <li>Top 5 finish at 2017 Super Nationals</li>
+    <li>Active competitive players — we still play in tournaments</li>
+    <li>Trained extensively with engines and know how to communicate what they show in human terms</li>
+    <li>Combined 10+ years of private coaching experience</li>
+  </ul>
+</div>
+
+<footer>
+  <span class="footer-logo">He Brothers Chess</span>
+  <p>Seattle, WA · Lessons on Lichess</p>
+</footer>
+</body>
+</html>

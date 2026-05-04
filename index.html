@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>He Brothers Chess</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero {
+    background: var(--green-dark);
+    background-image: repeating-conic-gradient(#ffffff04 0% 25%, transparent 0% 50%);
+    background-size: 52px 52px;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 4rem;
+  }
+  .hero-content { max-width: 680px; }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+  .hero h1 { color: #fff; margin-bottom: 1.2rem; }
+  .hero .desc {
+    font-size: 17px;
+    color: #bbb;
+    max-width: 460px;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 3.5rem;
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid #2d4a2d;
+  }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--gold-light);
+    display: block;
+    line-height: 1.1;
+  }
+  .stat-label { font-size: 12px; color: #888; margin-top: 4px; display: block; }
+  @media (max-width: 768px) {
+    .hero { padding: 3.5rem 1.2rem; min-height: auto; }
+    .hero-stats { gap: 2rem; flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">He Brothers Chess</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="coaching.html">Coaching</a></li>
+    <li><a href="assessment.html">Assessment</a></li>
+    <li><a href="book.html">Book</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-content">
+    <span class="hero-eyebrow">National Masters · Seattle, WA</span>
+    <h1>He Brothers<br>Chess</h1>
+    <p class="desc">We're identical twin National Masters who grew up playing in the Washington State chess scene. We coach players who are serious about getting better.</p>
+    <a href="assessment.html" class="btn">Start with an assessment</a>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">NM × 2</span>
+        <span class="stat-label">Both coaches are National Masters</span>
+      </div>
+      <div>
+        <span class="stat-num">2017</span>
+        <span class="stat-label">WA State Team Champions</span>
+      </div>
+      <div>
+        <span class="stat-num">1000–2200</span>
+        <span class="stat-label">USCF range we work with</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">He Brothers Chess</span>
+  <p>Seattle, WA · Lessons on Lichess</p>
+</footer>
+</body>
+</html>

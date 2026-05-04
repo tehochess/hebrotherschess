@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assessment — He Brothers Chess</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .assess-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-top: 2.5rem;
+  }
+  .assess-steps { display: flex; flex-direction: column; gap: 1.2rem; }
+  .step {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    gap: 1.1rem;
+    align-items: flex-start;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s;
+  }
+  .step:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.09); }
+  .step-letter {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--green-mid);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .step strong { display: block; font-size: 15px; color: var(--green-dark); margin-bottom: 3px; }
+  .step span { font-size: 13px; color: var(--muted); line-height: 1.7; }
+  .assess-aside { position: sticky; top: 80px; }
+  .aside-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.6rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .aside-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+  .aside-card p { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 0.7rem; }
+  .aside-card p:last-child { margin-bottom: 0; }
+  @media (max-width: 768px) {
+    .assess-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .assess-aside { position: static; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">He Brothers Chess</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="coaching.html">Coaching</a></li>
+    <li><a href="assessment.html" class="active">Assessment</a></li>
+    <li><a href="book.html">Book</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <span class="section-tag">Getting started</span>
+  <h1>The assessment</h1>
+  <p class="lead">Before any coaching begins, we run a structured diagnostic to get a clear picture of where you are. This shapes everything that follows — what we work on, what material we use, how sessions are structured.</p>
+
+  <div class="assess-layout">
+    <div class="assess-steps">
+      <div class="step">
+        <div class="step-letter">A</div>
+        <div>
+          <strong>Pattern recognition</strong>
+          <span>Timed tactical puzzles across mixed themes — forks, pins, mating nets. Shows how sharp your pattern recognition is under real pressure, not just when you know it's a tactics problem.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-letter">B</div>
+        <div>
+          <strong>Position evaluation</strong>
+          <span>Static positions, no moving pieces. Who's better and why? Identify weak squares, pawn structure features, the worst piece on the board, best plans for both sides.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-letter">C</div>
+        <div>
+          <strong>Prophylaxis</strong>
+          <span>What does your opponent want to do? How do you stop it? A lot of players at every level skip this step. It shows up clearly in games.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-letter">D</div>
+        <div>
+          <strong>Advanced puzzles</strong>
+          <span>Harder problems that require a move plus a full explanation. Wrong answers are as informative as right ones — the reasoning reveals a lot about blind spots.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-letter">E</div>
+        <div>
+          <strong>Self-evaluation</strong>
+          <span>Your honest read on your own game — comfort zones, what you avoid, how you feel in sharp vs. quiet positions. We compare this against what we see in the other sections.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="assess-aside">
+      <div class="aside-card">
+        <span class="aside-label">Format</span>
+        <p>Conducted online via Lichess. Free, no download, works in the browser. Makes sharing positions and PGNs simple.</p>
+        <p>Send over your recent tournament games if you have them — the more we see, the better the picture going in.</p>
+      </div>
+      <div class="aside-card">
+        <span class="aside-label">Who it's for</span>
+        <p>We recommend at least a year of experience and a USCF rating around 1000 before starting. Players up to 2200 have gotten meaningful work out of the program.</p>
+      </div>
+      <a href="book.html" class="btn" style="width:100%; text-align:center; display:block;">Book the assessment</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">He Brothers Chess</span>
+  <p>Seattle, WA · Lessons on Lichess</p>
+</footer>
+</body>
+</html>
