@@ -24,35 +24,23 @@
     color: var(--muted);
   }
   .info-row span { color: var(--green-dark); font-weight: 500; }
-  .calendly-wrap {
+  .form-wrap {
     background: #fff;
     border: 1px solid var(--border);
     border-radius: 8px;
     overflow: hidden;
-    min-height: 680px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   }
-  .calendly-placeholder {
-    text-align: center;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.8;
-    padding: 2rem;
-  }
-  .calendly-placeholder strong {
+  .form-wrap iframe {
+    width: 100%;
+    height: 720px;
+    border: none;
     display: block;
-    color: var(--green-mid);
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
   }
   @media (max-width: 768px) {
     .book-layout { grid-template-columns: 1fr; gap: 2rem; }
     .book-aside { position: static; }
+    .form-wrap iframe { height: 600px; }
   }
 </style>
 </head>
@@ -73,28 +61,17 @@
 
   <div class="book-layout">
     <div class="book-aside">
-      <p>Use the calendar to book an assessment or a first session. We'll discuss structure, pricing, and what to focus on from there.</p>
-      <p>If you have recent tournament games, send them when you book. The more context we have going in, the more useful the first session is.</p>
+      <p>Fill this out and we'll get back to you within a day or two. If you have recent tournament games, mention it — sending them over before the first session helps a lot.</p>
       <hr style="margin: 1.5rem 0;">
       <div class="info-row">Platform <span>Lichess (online)</span></div>
       <div class="info-row">Location <span>Seattle, WA (in-person available)</span></div>
       <div class="info-row">Rating range <span>~1000–2200 USCF</span></div>
     </div>
 
-    <div class="calendly-wrap">
-      <!-- PASTE YOUR CALENDLY EMBED CODE HERE -->
-      <!-- Example:
-      <div class="calendly-inline-widget"
-        data-url="https://calendly.com/YOUR_USERNAME"
-        style="min-width:320px;height:680px;width:100%;">
-      </div>
-      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-      -->
-      <div class="calendly-placeholder">
-        <strong>♟ Calendly embed</strong>
-        Create a free account at calendly.com,<br>
-        then paste your embed code here.
-      </div>
+    <div class="form-wrap">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe4OzzNFv024zvLqgkTVZQPFMD1RxBuye_X7oNdzBZ6c0iBpg/viewform?embedded=true">
+        Loading form...
+      </iframe>
     </div>
   </div>
 </div>
