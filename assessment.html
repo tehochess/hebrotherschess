@@ -65,6 +65,45 @@
     .assess-layout { grid-template-columns: 1fr; gap: 2rem; }
     .assess-aside { position: static; }
   }
+  .curriculum-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+  .curriculum-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.4rem 1.6rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .curriculum-title {
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--green-dark);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gold);
+  }
+  .curriculum-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .curriculum-card ul li {
+    font-size: 14px;
+    color: var(--muted);
+    padding: 0.35rem 0;
+    padding-left: 1rem;
+    border-bottom: 1px solid var(--cream2);
+    line-height: 1.5;
+  }
+  .curriculum-card ul li:last-child { border-bottom: none; }
+  .curriculum-card ul li::before { content: "–  "; color: var(--gold); }
+  @media (max-width: 768px) {
+    .curriculum-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -81,59 +120,45 @@
 <div class="page">
   <span class="section-tag">Getting started</span>
   <h1>The assessment</h1>
-  <p class="lead">Before any coaching begins, we run a structured diagnostic to get a clear picture of where you are. This shapes everything that follows — what we work on, what material we use, how sessions are structured.</p>
+  <p class="lead">Before any coaching begins, we run a structured diagnostic to get a clear picture of the student's strengths and weaknesses. This test was rigorously developed and curated by Daniel and has been implemented successfully. Below are the key areas being evaluated.</p>
 
-  <div class="assess-layout">
-    <div class="assess-steps">
-      <div class="step">
-        <div class="step-letter">A</div>
-        <div>
-          <strong>Pattern recognition</strong>
-          <span>Timed tactical puzzles across mixed themes — forks, pins, mating nets. Shows how sharp your pattern recognition is under real pressure, not just when you know it's a tactics problem.</span>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-letter">B</div>
-        <div>
-          <strong>Position evaluation</strong>
-          <span>Static positions, no moving pieces. Who's better and why? Identify weak squares, pawn structure features, the worst piece on the board, best plans for both sides.</span>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-letter">C</div>
-        <div>
-          <strong>Prophylaxis</strong>
-          <span>What does your opponent want to do? How do you stop it? A lot of players at every level skip this step. It shows up clearly in games.</span>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-letter">D</div>
-        <div>
-          <strong>Advanced puzzles</strong>
-          <span>Harder problems that require a move plus a full explanation. Wrong answers are as informative as right ones — the reasoning reveals a lot about blind spots.</span>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-letter">E</div>
-        <div>
-          <strong>Self-evaluation</strong>
-          <span>Your honest read on your own game — comfort zones, what you avoid, how you feel in sharp vs. quiet positions. We compare this against what we see in the other sections.</span>
-        </div>
-      </div>
+  <div class="curriculum-grid">
+    <div class="curriculum-card">
+      <div class="curriculum-title">Tactical</div>
+      <ul>
+        <li>Initiative (Forcing moves, checks, threats)</li>
+        <li>Calculation (Calculate + Evaluate)</li>
+        <li>Importance of tempo (important in sharp positions, less in static)</li>
+      </ul>
     </div>
+    <div class="curriculum-card">
+      <div class="curriculum-title">Planning</div>
+      <ul>
+        <li>3 B's (Bases, Breaks, Better)</li>
+        <li>Prophylaxis</li>
+        <li>Imbalances</li>
+      </ul>
+    </div>
+    <div class="curriculum-card">
+      <div class="curriculum-title">Positional</div>
+      <ul>
+        <li>Piece activity</li>
+        <li>Pawn structure</li>
+        <li>Space</li>
+      </ul>
+    </div>
+    <div class="curriculum-card">
+      <div class="curriculum-title">Psychology</div>
+      <ul>
+        <li>Active Defense</li>
+        <li>Go for it mindset</li>
+        <li>Clarity</li>
+      </ul>
+    </div>
+  </div>
 
-    <div class="assess-aside">
-      <div class="aside-card">
-        <span class="aside-label">Format</span>
-        <p>Conducted online via Lichess. Free, no download, works in the browser. Makes sharing positions and PGNs simple.</p>
-        <p>Send over your recent tournament games if you have them — the more we see, the better the picture going in.</p>
-      </div>
-      <div class="aside-card">
-        <span class="aside-label">Who it's for</span>
-        <p>We recommend at least a year of experience and a USCF rating around 1000 before starting. Players up to 2200 have gotten meaningful work out of the program.</p>
-      </div>
-      <a href="book.html" class="btn" style="width:100%; text-align:center; display:block;">Book the assessment</a>
-    </div>
+  <div style="margin-top:2.5rem;">
+    <a href="book.html" class="btn">Book the assessment</a>
   </div>
 </div>
 
