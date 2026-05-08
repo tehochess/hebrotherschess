@@ -80,6 +80,19 @@
     .bios { grid-template-columns: 1fr; }
     .cred-list { grid-template-columns: 1fr; }
   }
+  .bio-achievements {
+    list-style: none;
+    margin-top: 0.7rem;
+    padding: 0;
+  }
+  .bio-achievements li {
+    font-size: 13px;
+    color: var(--muted);
+    padding: 0.3rem 0;
+    padding-left: 1rem;
+    border-left: 2px solid var(--gold);
+    margin-bottom: 0.4rem;
+  }
 </style>
 </head>
 <body>
@@ -117,25 +130,21 @@
     <div class="bio">
       <h3>Daniel He</h3>
       <span class="bio-rating">FM · FIDE 2325</span>
+      <ul class="bio-achievements">
+        <li>Achieved FM title in 2025</li>
+        <li>2024 Washington State Champion</li>
+        <li>2400+ USCF</li>
+      </ul>
     </div>
     <div class="bio">
       <h3>Samuel He</h3>
       <span class="bio-rating">NM · FIDE 2174</span>
+      <ul class="bio-achievements">
+        <li>2-Time Washington Open Champion</li>
+      </ul>
     </div>
   </div>
 
-  <hr>
-
-  <span class="section-tag">Credentials</span>
-  <h2>Our background</h2>
-  <ul class="cred-list">
-    <li>Both achieved National Master before age 18</li>
-    <li>Coached Redmond High School to 2017 WA State Team Championship</li>
-    <li>Top 5 finish at 2017 Super Nationals</li>
-    <li>Active competitive players — we still play in tournaments</li>
-    <li>Trained extensively with engines and know how to communicate what they show in human terms</li>
-    <li>Combined 10+ years of private coaching experience</li>
-  </ul>
 </div>
 
 <footer>
