@@ -46,6 +46,7 @@
     margin-top: 0.5rem;
   }
   .bio { border-left: 3px solid var(--gold); padding-left: 1.2rem; }
+  .bio h3 { font-size: 22px; font-weight: 700; }
   .bio-rating {
     font-size: 11px;
     letter-spacing: 1px;
@@ -85,13 +86,45 @@
     margin-top: 0.7rem;
     padding: 0;
   }
-  .bio-achievements li {
+  .bio-achievements li { font-weight: 500;
     font-size: 13px;
     color: var(--muted);
     padding: 0.3rem 0;
     padding-left: 1rem;
     border-left: 2px solid var(--gold);
     margin-bottom: 0.4rem;
+  }
+  .testimonials {
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+  }
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  .testimonial-card {
+    background: var(--green-dark);
+    border-radius: 8px;
+    padding: 1.6rem;
+  }
+  .testimonial-text {
+    font-family: var(--serif);
+    font-size: 15px;
+    color: #ddd;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  .testimonial-author {
+    font-size: 12px;
+    color: var(--gold-light);
+    letter-spacing: 0.5px;
+  }
+  @media (max-width: 768px) {
+    .testimonial-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -133,6 +166,7 @@
       <ul class="bio-achievements">
         <li>Achieved FM title in 2025</li>
         <li>2024 Washington State Champion</li>
+        <li>3-Time Washington Junior Closed Champion</li>
         <li>2400+ USCF</li>
       </ul>
     </div>
@@ -141,10 +175,30 @@
       <span class="bio-rating">NM · FIDE 2174</span>
       <ul class="bio-achievements">
         <li>2-Time Washington Open Champion</li>
+        <li>2nd Place Grade 11 National Champion</li>
+        <li>2-Time Washington Junior Closed Champion</li>
       </ul>
     </div>
   </div>
 
+  <div class="testimonials">
+    <span class="section-tag">Student testimonials</span>
+    <h2>What our students say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-text">"Testimonial coming soon."</div>
+        <div class="testimonial-author">— Student name, rating</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-text">"Testimonial coming soon."</div>
+        <div class="testimonial-author">— Student name, rating</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-text">"Testimonial coming soon."</div>
+        <div class="testimonial-author">— Student name, rating</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <footer>
