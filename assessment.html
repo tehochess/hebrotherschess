@@ -104,12 +104,47 @@
   @media (max-width: 768px) {
     .curriculum-grid { grid-template-columns: 1fr; }
   }
+  .sneak-peek {
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+  }
+  .peek-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .peek-card {
+    background: var(--green-dark);
+    border-radius: 8px;
+    padding: 1.4rem 1.6rem;
+  }
+  .peek-card:last-child {
+    grid-column: span 2;
+    background: var(--cream2);
+    border: 1px solid var(--border);
+  }
+  .peek-card:last-child .peek-title { color: var(--green-dark); }
+  .peek-card:last-child .peek-desc { color: var(--muted); }
+  .peek-title {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 0.5rem;
+  }
+  .peek-desc { font-size: 13px; color: #bbb; line-height: 1.7; }
+  @media (max-width: 768px) {
+    .peek-grid { grid-template-columns: 1fr; }
+    .peek-card:last-child { grid-column: span 1; }
+  }
 </style>
 </head>
 <body>
 <nav>
   <a href="index.html" class="nav-logo">He Brothers Chess</a>
   <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="coaching.html">Coaching</a></li>
     <li><a href="assessment.html" class="active">Assessment</a></li>
@@ -119,8 +154,8 @@
 
 <div class="page">
   <span class="section-tag">Getting started</span>
-  <h1>The assessment</h1>
-  <p class="lead">Before any coaching begins, we run a structured diagnostic to get a clear picture of the student's strengths and weaknesses. This test was rigorously developed and curated by Daniel and has been implemented successfully. Below are the key areas being evaluated.</p>
+  <h1>Taking your first step: Our assessment</h1>
+  <p class="lead">We believe strongly in developing a strong foundation for the student from the first class. Before any coaching begins, we run a structured diagnostic woven into the introductory lesson to get a clear picture of the student's strengths and weaknesses. This test was rigorously developed and curated as a long-term collaboration between Daniel and Samuel and has been implemented successfully. Below are the key areas being evaluated.</p>
 
   <div class="curriculum-grid">
     <div class="curriculum-card">
@@ -157,8 +192,34 @@
     </div>
   </div>
 
-  <div style="margin-top:2.5rem;">
-    <a href="book.html" class="btn">Book the assessment</a>
+  <div class="sneak-peek">
+    <div class="sneak-header">
+      <span class="section-tag">A glimpse inside</span>
+      <h2>What the assessment covers</h2>
+      <p style="color:var(--muted); font-size:14px; margin-bottom:1.8rem;">A sample of the areas we evaluate — not exhaustive, just a taste.</p>
+    </div>
+    <div class="peek-grid">
+      <div class="peek-card">
+        <div class="peek-title">Pattern Recognition</div>
+        <div class="peek-desc">Timed puzzles across mixed themes — forks, pins, mating nets. Measures instant recognition vs. tactical blindness under pressure.</div>
+      </div>
+      <div class="peek-card">
+        <div class="peek-title">Position Evaluation</div>
+        <div class="peek-desc">Static positions, no moving pieces. Who's better and why? Identify weak squares, pawn structure, the worst piece, best plans for both sides.</div>
+      </div>
+      <div class="peek-card">
+        <div class="peek-title">Opponent Awareness</div>
+        <div class="peek-desc">What does your opponent want? How do you stop it? Tests prophylactic thinking — one of the most commonly skipped skills at every level.</div>
+      </div>
+      <div class="peek-card">
+        <div class="peek-title">Deep Problem Solving</div>
+        <div class="peek-desc">Harder puzzles requiring a move plus a full explanation. Wrong answers are as informative as right ones — the reasoning reveals specific blind spots.</div>
+      </div>
+      <div class="peek-card">
+        <div class="peek-title">Self-Evaluation</div>
+        <div class="peek-desc">An honest read on your own game — comfort zones, what you avoid, how you handle sharp vs. quiet positions. We compare this against the rest.</div>
+      </div>
+    </div>
   </div>
 </div>
 
