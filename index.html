@@ -90,6 +90,32 @@
     .section-link { border-right: none; border-bottom: 1px solid var(--border); }
     .section-link:last-child { border-bottom: none; }
   }
+  .tandem-photo {
+    position: relative;
+    width: 100%;
+    max-height: 480px;
+    overflow: hidden;
+  }
+  .tandem-photo img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    filter: brightness(0.85);
+  }
+  .tandem-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 2rem 1rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    font-size: 12px;
+    color: #ccc;
+    letter-spacing: 0.3px;
+    font-style: italic;
+  }
 </style>
 </head>
 <body>
@@ -106,7 +132,6 @@
 
 <div class="hero">
   <div class="hero-content">
-    <span class="hero-eyebrow">Seattle, WA</span>
     <h1>He Brothers<br>Chess</h1>
     <p class="hero-sub">Modernized structured training for the serious chess improver. Run by FM Daniel He and NM Samuel He.</p>
     <div class="hero-actions">
@@ -116,23 +141,25 @@
   </div>
 </div>
 
+
+<div class="tandem-photo">
+  <img src="tandem.jpg" alt="Samuel He and Daniel He during tandem simul">
+  <div class="tandem-caption">Samuel He (L) and Daniel He during their tandem simul at Blakely Hall in Issaquah. Photo by Meiling Cheng.</div>
+</div>
 <div class="sections">
   <a href="coaching.html" class="section-link">
     <span class="section-link-tag">Methodology</span>
     <h3>Our approach</h3>
-    <p>We find your weak areas, build targeted material around them, and help you turn abstract concepts into practical results.</p>
     <span class="section-link-arrow">→</span>
   </a>
   <a href="assessment.html" class="section-link">
     <span class="section-link-tag">Getting started</span>
     <h3>The assessment</h3>
-    <p>Before coaching begins, we run a diagnostic woven into the first lesson to map your strengths, weaknesses, and learning style.</p>
     <span class="section-link-arrow">→</span>
   </a>
   <a href="book.html" class="section-link">
     <span class="section-link-tag">Contact</span>
     <h3>Work with us</h3>
-    <p>Reach out with your background and what you're looking to work on. We'll take it from there.</p>
     <span class="section-link-arrow">→</span>
   </a>
 </div>
