@@ -16,7 +16,7 @@
     gap: 3rem;
     padding: 4rem;
   }
-  .hero-left { }
+
   .hero-right { display: flex; flex-direction: column; align-items: center; }
   .hero-right img { width: 100%; max-width: 420px; height: auto; border-radius: 6px; }
   .hero-photo-caption { font-size: 11px; color: #666; font-style: italic; margin-top: 0.6rem; text-align: center; line-height: 1.5; }
@@ -87,7 +87,16 @@
   .section-link p { font-size: 13px; color: var(--muted); line-height: 1.6; }
   .section-link-arrow { font-size: 18px; color: var(--gold); margin-top: 1rem; display: block; }
   @media (max-width: 768px) {
-    .hero { padding: 3.5rem 1.2rem; min-height: auto; }
+    .hero {
+    background: var(--green-dark);
+    background-image: repeating-conic-gradient(#ffffff04 0% 25%, transparent 0% 50%);
+    background-size: 52px 52px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem;
+  }
     .credentials { gap: 1.5rem; }
     .sections { grid-template-columns: 1fr; }
     .section-link { border-right: none; border-bottom: 1px solid var(--border); }
@@ -110,6 +119,10 @@
     margin-top: 0.6rem;
     padding-bottom: 1.2rem;
   }
+  .hero-left { }
+  .hero-right { display:flex; flex-direction:column; align-items:center; }
+  .hero-right img { width:100%; max-width:420px; height:auto; border-radius:6px; }
+  .hero-caption { font-size:11px; color:#666; font-style:italic; margin-top:0.6rem; text-align:center; line-height:1.5; }
 </style>
 </head>
 <body>
@@ -125,7 +138,7 @@
 </nav>
 
 <div class="hero">
-  <div class="hero-content">
+  <div class="hero-left">
     <h1>He Brothers<br>Chess</h1>
     <p class="hero-sub">Modernized structured training for the serious chess improver. Run by FM Daniel He and NM Samuel He.</p>
     <div class="hero-actions">
@@ -133,12 +146,10 @@
       <a href="about.html" class="btn-ghost-light">About us</a>
     </div>
   </div>
-</div>
-
-
-<div class="tandem-photo">
-  <img src="tandem.jpg" alt="Samuel He and Daniel He during tandem simul">
-  <div class="tandem-caption">Samuel He (L) and Daniel He during their tandem simul at Blakely Hall in Issaquah. Photo by Meiling Cheng.</div>
+  <div class="hero-right">
+    <img src="tandem.jpg" alt="Samuel He and Daniel He during tandem simul">
+    <p class="hero-caption">Samuel He (L) and Daniel He during their tandem simul at Blakely Hall in Issaquah. Photo by Meiling Cheng.</p>
+  </div>
 </div>
 <div class="sections">
   <a href="coaching.html" class="section-link">
