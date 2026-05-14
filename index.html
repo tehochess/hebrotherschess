@@ -10,18 +10,16 @@
     background: var(--green-dark);
     background-image: repeating-conic-gradient(#ffffff04 0% 25%, transparent 0% 50%);
     background-size: 52px 52px;
-    min-height: 0;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
-    padding: 4rem 4rem;
     gap: 3rem;
+    padding: 4rem;
   }
-  .hero-content { max-width: 460px; flex-shrink: 0; }
-  .hero-photo { flex: 1; display: flex; flex-direction: column; align-items: center; }
-  .hero-photo img { width: 100%; max-width: 400px; height: auto; border-radius: 6px; filter: brightness(0.92); }
-  .hero-photo-caption { font-size: 11px; color: #666; font-style: italic; margin-top: 0.6rem; text-align: center; max-width: 400px; line-height: 1.5; }
+  .hero-left { }
+  .hero-right { display: flex; flex-direction: column; align-items: center; }
+  .hero-right img { width: 100%; max-width: 420px; height: auto; border-radius: 6px; }
+  .hero-photo-caption { font-size: 11px; color: #666; font-style: italic; margin-top: 0.6rem; text-align: center; line-height: 1.5; }
   .hero-eyebrow {
     font-size: 11px;
     letter-spacing: 2.5px;
