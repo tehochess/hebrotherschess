@@ -60,7 +60,7 @@
     border-top: 3px solid var(--gold);
   }
   .section-link {
-    padding: 2.5rem 2rem;
+    padding: 1.6rem 1.8rem;
     border-right: 1px solid var(--border);
     text-decoration: none;
     transition: background 0.2s;
@@ -91,30 +91,25 @@
     .section-link:last-child { border-bottom: none; }
   }
   .tandem-photo {
-    position: relative;
-    width: 100%;
-    max-height: 480px;
-    overflow: hidden;
+    background: #0d1a0d;
+    text-align: center;
+    padding: 2rem 2rem 0.8rem;
   }
   .tandem-photo img {
+    max-width: 480px;
     width: 100%;
-    max-height: 480px;
-    object-fit: cover;
-    object-position: center 20%;
-    display: block;
-    filter: brightness(0.85);
+    height: auto;
+    display: inline-block;
+    border-radius: 6px;
+    filter: brightness(0.92);
   }
   .tandem-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2rem 2rem 1rem;
-    background: linear-gradient(transparent, rgba(0,0,0,0.7));
-    font-size: 12px;
-    color: #ccc;
+    font-size: 11px;
+    color: #777;
     letter-spacing: 0.3px;
     font-style: italic;
+    margin-top: 0.6rem;
+    padding-bottom: 1.2rem;
   }
 </style>
 </head>
