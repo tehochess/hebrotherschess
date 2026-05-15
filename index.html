@@ -14,7 +14,7 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 3rem;
-    padding: 4rem;
+    padding: 2.5rem 4rem;
   }
 
   .hero-right { display: flex; flex-direction: column; align-items: center; }
@@ -28,7 +28,7 @@
     margin-bottom: 1.2rem;
     display: block;
   }
-  .hero h1 { color: #fff; margin-bottom: 1rem; font-size: clamp(42px, 6vw, 72px); }
+  .hero h1 { color: #fff; margin-bottom: 0.8rem; font-size: clamp(32px, 4vw, 52px); }
   .hero-sub {
     font-size: 17px;
     color: #999;
@@ -63,7 +63,7 @@
     border-top: 3px solid var(--gold);
   }
   .section-link {
-    padding: 1.6rem 1.8rem;
+    padding: 1.2rem 1.8rem;
     border-right: 1px solid var(--border);
     text-decoration: none;
     transition: background 0.2s;
@@ -95,7 +95,7 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 3rem;
-    padding: 4rem;
+    padding: 2.5rem 4rem;
   }
     .credentials { gap: 1.5rem; }
     .sections { grid-template-columns: 1fr; }
@@ -121,7 +121,7 @@
   }
   .hero-left { }
   .hero-right { display:flex; flex-direction:column; align-items:center; }
-  .hero-right img { width:100%; max-width:420px; height:auto; border-radius:6px; }
+  .hero-right img { width:100%; max-width:100%; height:320px; object-fit:cover; object-position:center 30%; border-radius:6px; }
   .hero-caption { font-size:11px; color:#666; font-style:italic; margin-top:0.6rem; text-align:center; line-height:1.5; }
 </style>
 </head>
@@ -151,7 +151,7 @@
     <p class="hero-caption">Samuel He (L) and Daniel He during their tandem simul at Blakely Hall in Issaquah. Photo by Meiling Cheng.</p>
   </div>
 </div>
-<div class="sections">
+<div class="sections" style="flex:1;">
   <a href="coaching.html" class="section-link">
     <span class="section-link-tag">Methodology</span>
     <h3>Our approach</h3>
