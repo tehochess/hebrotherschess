@@ -6,37 +6,25 @@
 <title>He Brothers Chess</title>
 <link rel="stylesheet" href="style.css">
 <style>
+  html, body { height: 100%; margin: 0; }
+
   .hero {
     background: var(--green-dark);
     background-image: repeating-conic-gradient(#ffffff04 0% 25%, transparent 0% 50%);
     background-size: 52px 52px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 3rem;
-    padding: 2.5rem 4rem;
+    min-height: 80vh;
   }
-
-  .hero-right { display: flex; flex-direction: column; align-items: center; }
-  .hero-right img { width: 100%; max-width: 420px; height: auto; border-radius: 6px; }
-  .hero-photo-caption { font-size: 11px; color: #666; font-style: italic; margin-top: 0.6rem; text-align: center; line-height: 1.5; }
-  .hero-eyebrow {
-    font-size: 11px;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1.2rem;
-    display: block;
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 3rem 3rem 4rem;
   }
-  .hero h1 { color: #fff; margin-bottom: 0.8rem; font-size: clamp(32px, 4vw, 52px); }
-  .hero-sub {
-    font-size: 17px;
-    color: #999;
-    line-height: 1.75;
-    margin-bottom: 2.5rem;
-    max-width: 440px;
-  }
-  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 4rem; }
+  .hero-left h1 { color: #fff; font-size: clamp(32px, 4vw, 54px); margin-bottom: 0.8rem; line-height: 1.1; }
+  .hero-sub { font-size: 15px; color: #999; line-height: 1.75; margin-bottom: 2rem; max-width: 380px; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn-ghost-light {
     display: inline-block;
     background: transparent;
@@ -50,79 +38,53 @@
     transition: border-color 0.2s, color 0.2s;
   }
   .btn-ghost-light:hover { border-color: rgba(255,255,255,0.4); color: #fff; }
-  .hero-divider { border: none; border-top: 1px solid #2d4a2d; margin-bottom: 2.5rem; }
-  .credentials { display: flex; gap: 3rem; flex-wrap: wrap; }
-  .cred-block {}
-  .cred-name { font-family: var(--serif); font-size: 16px; color: #fff; margin-bottom: 2px; }
-  .cred-detail { font-size: 12px; color: #666; }
-  .cred-detail span { color: var(--gold); }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+  .hero-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 1.5rem 1rem 0.6rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.6));
+    font-size: 11px;
+    color: #bbb;
+    font-style: italic;
+  }
+
   .sections {
-    background: #fff;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     border-top: 3px solid var(--gold);
+    background: #fff;
   }
   .section-link {
-    padding: 1.2rem 1.8rem;
+    padding: 1.4rem 2rem;
     border-right: 1px solid var(--border);
     text-decoration: none;
     transition: background 0.2s;
   }
   .section-link:last-child { border-right: none; }
   .section-link:hover { background: #f5f0e8; }
-  .section-link-tag {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--gold);
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  .section-link h3 {
-    font-family: var(--serif);
-    font-size: 18px;
-    color: var(--green-dark);
-    margin-bottom: 0.5rem;
-  }
-  .section-link p { font-size: 13px; color: var(--muted); line-height: 1.6; }
-  .section-link-arrow { font-size: 18px; color: var(--gold); margin-top: 1rem; display: block; }
+  .section-link-tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.4rem; }
+  .section-link h3 { font-family: var(--serif); font-size: 17px; color: var(--green-dark); margin-bottom: 0; }
+  .section-link-arrow { font-size: 16px; color: var(--gold); margin-top: 0.6rem; display: block; }
+
   @media (max-width: 768px) {
-    .hero {
-    background: var(--green-dark);
-    background-image: repeating-conic-gradient(#ffffff04 0% 25%, transparent 0% 50%);
-    background-size: 52px 52px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 3rem;
-    padding: 2.5rem 4rem;
-  }
-    .credentials { gap: 1.5rem; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 2.5rem 1.5rem; }
+    .hero-right { height: 280px; }
     .sections { grid-template-columns: 1fr; }
     .section-link { border-right: none; border-bottom: 1px solid var(--border); }
-    .section-link:last-child { border-bottom: none; }
   }
-
-  .tandem-photo img {
-    max-width: 480px;
-    width: 100%;
-    height: auto;
-    display: inline-block;
-    border-radius: 6px;
-    filter: brightness(0.92);
-  }
-  .tandem-caption {
-    font-size: 11px;
-    color: #777;
-    letter-spacing: 0.3px;
-    font-style: italic;
-    margin-top: 0.6rem;
-    padding-bottom: 1.2rem;
-  }
-  .hero-left { }
-  .hero-right { display:flex; flex-direction:column; align-items:center; }
-  .hero-right img { width:100%; max-width:100%; height:320px; object-fit:cover; object-position:center 30%; border-radius:6px; }
-  .hero-caption { font-size:11px; color:#666; font-style:italic; margin-top:0.6rem; text-align:center; line-height:1.5; }
 </style>
 </head>
 <body>
@@ -148,10 +110,11 @@
   </div>
   <div class="hero-right">
     <img src="tandem.jpg" alt="Samuel He and Daniel He during tandem simul">
-    <p class="hero-caption">Samuel He (L) and Daniel He during their tandem simul at Blakely Hall in Issaquah. Photo by Meiling Cheng.</p>
+    <div class="hero-caption">Samuel He (L) and Daniel He during their tandem simul at Blakely Hall in Issaquah. Photo by Meiling Cheng.</div>
   </div>
 </div>
-<div class="sections" style="flex:1;">
+
+<div class="sections">
   <a href="coaching.html" class="section-link">
     <span class="section-link-tag">Methodology</span>
     <h3>Our approach</h3>
@@ -171,7 +134,6 @@
 
 <footer>
   <span class="footer-logo">He Brothers Chess</span>
-  
 </footer>
 </body>
 </html>
