@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — He Brothers Chess</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .faq-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1px; }
+
+  .faq-item {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .faq-item:first-child { border-radius: 8px 8px 0 0; }
+  .faq-item:last-child { border-radius: 0 0 8px 8px; }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 1.3rem 1.6rem;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--green-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: background 0.15s;
+  }
+  .faq-question:hover { background: var(--cream2); }
+  .faq-question.open { background: var(--green-dark); color: #fff; }
+
+  .faq-icon {
+    font-size: 20px;
+    font-weight: 300;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+    color: var(--gold);
+  }
+  .faq-question.open .faq-icon { transform: rotate(45deg); color: var(--gold-light); }
+
+  .faq-answer {
+    display: none;
+    padding: 0 1.6rem 1.4rem;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.85;
+    border-top: 1px solid var(--border);
+    background: #fff;
+  }
+  .faq-answer.open { display: block; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">He Brothers Chess</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="coaching.html">Coaching</a></li>
+    <li><a href="assessment.html">Assessment</a></li>
+    <li><a href="faq.html" class="active">FAQ</a></li>
+    <li><a href="book.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <span class="section-tag">Frequently asked questions</span>
+  <h1>FAQ</h1>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        What makes your coaching unique?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Our coaching emphasizes mindset and practical decision-making, not just the sharing of chess knowledge. As active tournament competitors, we stay up to date with modern training methods and are able to teach concepts in a way that is highly relevant to today's tournament environment. We believe strong coaching is not only about possessing chess knowledge but also applying it effectively during games.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        What level of students do you work with?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Our coaching is best suited for students with at least a basic understanding of the rules, tactics, and tournament play fundamentals. Players ranging from new tournament players up to around 2100 US Chess rating can benefit from our training. We enjoy working with ambitious students who are motivated to improve and willing to put in consistent effort between lessons. Students of all ages are welcome.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        How did you develop your 12 concepts?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Our 12 concepts were developed through years of personal tournament experience, training, analysis, and studying high-level chess. Together, they form a structured framework that covers all major areas of improvement. Some concepts are tactical, some are strategic, but the majority focus on mindset and practical decision-making. We believe building a strong foundation in these areas is critical for long-term chess improvement.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        How are lessons conducted?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Lessons are conducted online using Lichess Studies and Microsoft Teams through voice and/or video call depending on student preference. All lesson materials are saved in the studies, allowing students to come back and review the lessons at any time. We find this format to be highly efficient, even more so than in-person lessons.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        What does a typical lesson look like?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Most students take one-hour lessons weekly or every other week. Lessons typically involve reviewing the students' recent games to reinforce concepts and identify recurring weaknesses. We also review model master games and exercises together where students explain their thought process and compare with the coach's. At the end of each lesson, students receive an email summary of the session along with assigned homework and feedback.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        What kind of homework and training plans do students receive?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        We strongly encourage students to regularly play longer time-control games online and participate in over-the-board tournaments whenever possible. Students are also assigned puzzles to solve, model games to review, and book recommendations tailored to their currently weaker areas. We maintain a large database of instructive exercises for each concept. Homework is reviewed the following lesson to ensure students fully understand the exercises.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        How is progress tracked?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        We encourage students to play over-the-board tournaments regularly, ideally at least once per month. Progress is most visibly reflected through rating improvement, but meaningful improvement in thought process, practical decision-making, and reducing recurring mistakes often occurs gradually over time. Lessons and training plans are continuously adjusted based on the student's games and evolving strengths and weaknesses.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        What are your lesson rates?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Lesson rates start at $80 per session, with package discounts available for students seeking consistent long-term training. For information about small group lessons, training games, or other coaching options, please reach out through the contact page.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggle(this)">
+        Will students work with both coaches?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes. While students are typically assigned a primary coach based on their level, goals, and scheduling needs, both coaches collaborate behind the scenes on curriculum development, training structure, and identifying student weaknesses. This team-oriented approach allows students to benefit from a consistent training philosophy while still receiving personalized instruction from their primary coach.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">He Brothers Chess</span>
+</footer>
+
+<script>
+  function toggle(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    // Open this one if it wasn't already open
+    if (!isOpen) {
+      btn.classList.add('open');
+      answer.classList.add('open');
+    }
+  }
+</script>
+</body>
+</html>
