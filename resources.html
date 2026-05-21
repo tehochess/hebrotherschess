@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — He Brothers Chess</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .resources-intro { max-width: 600px; margin-bottom: 3rem; }
+
+  .resource-section { margin-bottom: 3.5rem; }
+  .resource-section-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--green-dark);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .book-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.4rem 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .book-card:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.09); }
+  .book-icon { font-size: 22px; margin-bottom: 0.2rem; }
+  .book-title {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--green-dark);
+    line-height: 1.3;
+  }
+  .book-author { font-size: 12px; color: var(--gold); letter-spacing: 0.5px; text-transform: uppercase; }
+  .book-desc { font-size: 13px; color: var(--muted); line-height: 1.65; margin-top: 0.3rem; }
+  .book-level {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: var(--cream2);
+    color: var(--green-mid);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3px 10px;
+    margin-top: 0.4rem;
+    align-self: flex-start;
+  }
+
+  .site-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .site-card {
+    background: var(--green-dark);
+    border-radius: 8px;
+    padding: 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .site-name {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gold-light);
+  }
+  .site-desc { font-size: 13px; color: #aaa; line-height: 1.65; }
+  .site-link {
+    font-size: 11px;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    margin-top: 0.3rem;
+    align-self: flex-start;
+  }
+  .site-link:hover { color: var(--gold-light); }
+
+  .coming-soon {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">He Brothers Chess</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="coaching.html">Coaching</a></li>
+    <li><a href="assessment.html">Assessment</a></li>
+    <li><a href="resources.html" class="active">Resources</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="book.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <span class="section-tag">Learning materials</span>
+  <h1>Resources</h1>
+  <div class="resources-intro">
+    <p class="lead">A curated list of books, sites, and tools we recommend to our students. These are resources we've personally used and believe in.</p>
+  </div>
+
+  <!-- BOOKS -->
+  <div class="resource-section">
+    <div class="resource-section-title">📚 Recommended books</div>
+    <div class="book-grid">
+
+      <div class="book-card">
+        <div class="book-icon">♟</div>
+        <div class="book-title">How to Reassess Your Chess</div>
+        <div class="book-author">Jeremy Silman</div>
+        <div class="book-desc">A foundational text on imbalances and positional thinking. Teaches you how to identify what's happening in a position and form a plan accordingly.</div>
+        <span class="book-level">Intermediate – Advanced</span>
+      </div>
+
+      <div class="book-card">
+        <div class="book-icon">♟</div>
+        <div class="book-title">The Amateur's Mind</div>
+        <div class="book-author">Jeremy Silman</div>
+        <div class="book-desc">Silman analyzes games from amateur players and explains the thinking errors behind common mistakes. Very practical for self-improvement.</div>
+        <span class="book-level">Beginner – Intermediate</span>
+      </div>
+
+      <div class="book-card">
+        <div class="book-icon">♟</div>
+        <div class="book-title">Silman's Complete Endgame Course</div>
+        <div class="book-author">Jeremy Silman</div>
+        <div class="book-desc">Endgames organized by rating level — you only study what's relevant to your current strength. One of the most practical endgame books ever written.</div>
+        <span class="book-level">All levels</span>
+      </div>
+
+      <div class="book-card">
+        <div class="book-icon">♟</div>
+        <div class="book-title">The Art of Attack in Chess</div>
+        <div class="book-author">Vladimir Vukovic</div>
+        <div class="book-desc">The definitive guide to attacking chess. Covers king safety, piece coordination, sacrifices, and mating patterns with deep explanations and examples.</div>
+        <span class="book-level">Intermediate – Advanced</span>
+      </div>
+
+      <div class="book-card">
+        <div class="book-icon">♟</div>
+        <div class="book-title">Chess Structures</div>
+        <div class="book-author">Mauricio Flores Rios</div>
+        <div class="book-desc">A thorough breakdown of pawn structures and the plans that arise from them. Essential reading for understanding positional chess at a deep level.</div>
+        <span class="book-level">Intermediate – Advanced</span>
+      </div>
+
+    </div>
+    <p class="coming-soon">More book recommendations coming soon.</p>
+  </div>
+
+  <!-- SITES -->
+  <div class="resource-section">
+    <div class="resource-section-title">🌐 Useful sites</div>
+    <div class="site-grid">
+
+      <div class="site-card">
+        <div class="site-name">Lichess</div>
+        <div class="site-desc">Free, open-source chess platform. Where we run all our lessons. Excellent for analysis, puzzles, and longer time-control games.</div>
+        <a href="https://lichess.org" target="_blank" class="site-link">lichess.org →</a>
+      </div>
+
+      <div class="site-card">
+        <div class="site-name">Chess Tempo</div>
+        <div class="site-desc">The best puzzle training site. Tracks your performance by theme so you can identify and drill your specific weaknesses.</div>
+        <a href="https://chesstempo.com" target="_blank" class="site-link">chesstempo.com →</a>
+      </div>
+
+      <div class="site-card">
+        <div class="site-name">US Chess</div>
+        <div class="site-desc">Official US Chess Federation site. Find rated over-the-board tournaments near you — essential for serious improvement.</div>
+        <a href="https://uschess.org" target="_blank" class="site-link">uschess.org →</a>
+      </div>
+
+    </div>
+    <p class="coming-soon">More site recommendations coming soon.</p>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-logo">He Brothers Chess</span>
+</footer>
+</body>
+</html>
