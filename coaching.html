@@ -95,32 +95,36 @@
     margin-bottom: 0.5rem;
   }
   .lichess-sub { font-size: 13px; color: var(--muted); }
+  .lichess-wrap {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
   .ch-list {
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    margin-bottom: 10px;
-    max-height: 260px;
+    gap: 1px;
     overflow-y: auto;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    max-height: 600px;
     background: #fff;
-    padding: 4px;
+    border-right: 1px solid var(--border);
+    padding: 6px;
   }
   .ch-btn {
     text-align: left;
     background: none;
     border: none;
     border-radius: 4px;
-    padding: 7px 12px;
+    padding: 8px 12px;
     font-family: var(--sans);
     font-size: 13px;
     color: var(--green-dark);
     cursor: pointer;
     transition: background 0.15s;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.4;
   }
   .ch-btn:hover { background: var(--cream2); }
   .ch-btn.active { background: var(--green-dark); color: var(--gold-light); }
@@ -178,7 +182,7 @@
     <p class="lead" style="margin-bottom:2rem;">Below is an annotated sample model game taken from one of our lessons. We believe model games are important to demonstrate key concepts and themes in an actual game to reinforce understanding.</p>
 
     <div class="lichess-embed">
-<div class="ch-list">
+<div class="lichess-wrap"><div class="ch-list">
 <button class="ch-btn active" onclick="switchCh('tVETqVvG', this)">1. Welcome and Introduction</button>
         <button class="ch-btn" onclick="switchCh('gsWIqC0R', this)">2. Mistake 1: Castling automatically</button>
         <button class="ch-btn" onclick="switchCh('QbHneATR', this)">3. Mistake 2: Automatic Moves like a Robot</button>
@@ -200,8 +204,7 @@
         <button class="ch-btn" onclick="switchCh('4HR51Ma4', this)">19. Mistake 18: Unequal trades against higher rated players</button>
         <button class="ch-btn" onclick="switchCh('T8kDWLOD', this)">20. Mistake 19: Rushing the attack</button>
         <button class="ch-btn" onclick="switchCh('c4kFVjPh', this)">21. Mistake 20: Too scared to sacrifice material</button>
-      </div>
-      <iframe id="lf" src="https://lichess.org/study/embed/xx2nOKJv/tVETqVvG" style="width:100%;height:600px;border:none;" allowtransparency="true" frameborder="0"></iframe>
+      </div><iframe id="lf" src="https://lichess.org/study/embed/xx2nOKJv/tVETqVvG" style="width:100%;height:600px;border:none;display:block;" allowtransparency="true" frameborder="0"></iframe></div>
       <script>
         function switchCh(id, btn) {
           document.getElementById('lf').src = 'https://lichess.org/study/embed/xx2nOKJv/' + id;
