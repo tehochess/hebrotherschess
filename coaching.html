@@ -95,6 +95,35 @@
     margin-bottom: 0.5rem;
   }
   .lichess-sub { font-size: 13px; color: var(--muted); }
+  .ch-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 10px;
+    max-height: 260px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #fff;
+    padding: 4px;
+  }
+  .ch-btn {
+    text-align: left;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    padding: 7px 12px;
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--green-dark);
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .ch-btn:hover { background: var(--cream2); }
+  .ch-btn.active { background: var(--green-dark); color: var(--gold-light); }
 </style>
 </head>
 <body>
@@ -149,7 +178,37 @@
     <p class="lead" style="margin-bottom:2rem;">Below is an annotated sample model game taken from one of our lessons. We believe model games are important to demonstrate key concepts and themes in an actual game to reinforce understanding.</p>
 
     <div class="lichess-embed">
-<iframe src="https://lichess.org/study/embed/xx2nOKJv/tVETqVvG" style="width:100%;height:900px;border:none;" allowtransparency="true" frameborder="0"></iframe>
+<div class="ch-list">
+<button class="ch-btn active" onclick="switchCh('tVETqVvG', this)">1. Welcome and Introduction</button>
+        <button class="ch-btn" onclick="switchCh('gsWIqC0R', this)">2. Mistake 1: Castling automatically</button>
+        <button class="ch-btn" onclick="switchCh('QbHneATR', this)">3. Mistake 2: Automatic Moves like a Robot</button>
+        <button class="ch-btn" onclick="switchCh('cloWyIqI', this)">4. Mistake 3: Pushing pawns unnecessarily</button>
+        <button class="ch-btn" onclick="switchCh('Fe0wkJfY', this)">5. Mistake 4: Exchanging pawns blindly</button>
+        <button class="ch-btn" onclick="switchCh('T6PWwO3h', this)">6. Mistake 5: Playing too reactively</button>
+        <button class="ch-btn" onclick="switchCh('oOpJ3VCu', this)">7. Mistake 6: Not punishing your opponent</button>
+        <button class="ch-btn" onclick="switchCh('V54wei5w', this)">8. Mistake 7: Grabbing too much material at a risk</button>
+        <button class="ch-btn" onclick="switchCh('H3gZAuDE', this)">9. Mistake 8: Not having a long term plan</button>
+        <button class="ch-btn" onclick="switchCh('JoC0TTnJ', this)">10. Mistake 9: Trading bishop for knight incorrectly</button>
+        <button class="ch-btn" onclick="switchCh('9uGKz9Mx', this)">11. Mistake 10: Not fully utilizing initiative</button>
+        <button class="ch-btn" onclick="switchCh('aeELYde8', this)">12. Mistake 11: Being too materialistic</button>
+        <button class="ch-btn" onclick="switchCh('dO8oCWI7', this)">13. Mistake 12: Not thinking ahead</button>
+        <button class="ch-btn" onclick="switchCh('zIZhJGWr', this)">14. Mistake 13: Not considering all variations of a tactic</button>
+        <button class="ch-btn" onclick="switchCh('KzxyjeoV', this)">15. Mistake 14: Unnecessary pawn moves near king</button>
+        <button class="ch-btn" onclick="switchCh('MMAzQvYL', this)">16. Mistake 15: Blindly following general chess principles</button>
+        <button class="ch-btn" onclick="switchCh('kU6AdU7v', this)">17. Mistake 16: Giving up too early</button>
+        <button class="ch-btn" onclick="switchCh('cG9qalqd', this)">18. Mistake 17: Unaware of the dynamics of the position</button>
+        <button class="ch-btn" onclick="switchCh('4HR51Ma4', this)">19. Mistake 18: Unequal trades against higher rated players</button>
+        <button class="ch-btn" onclick="switchCh('T8kDWLOD', this)">20. Mistake 19: Rushing the attack</button>
+        <button class="ch-btn" onclick="switchCh('c4kFVjPh', this)">21. Mistake 20: Too scared to sacrifice material</button>
+      </div>
+      <iframe id="lf" src="https://lichess.org/study/embed/xx2nOKJv/tVETqVvG" style="width:100%;height:600px;border:none;" allowtransparency="true" frameborder="0"></iframe>
+      <script>
+        function switchCh(id, btn) {
+          document.getElementById('lf').src = 'https://lichess.org/study/embed/xx2nOKJv/' + id;
+          document.querySelectorAll('.ch-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        }
+      </script>
     </div>
   </div>
 </div>
