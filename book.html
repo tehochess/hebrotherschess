@@ -149,7 +149,7 @@
     </div>
 
     <div class="form-card">
-      <form action="https://docs.google.com/forms/d/e/1FAIpQLSe4OzzNFv024zvLqgkTVZQPFMD1RxBuye_X7oNdzBZ6c0iBpg/viewform" method="GET" target="_blank">
+      <form action="https://formspree.io/f/xojbpkyv" method="POST">
         <div class="form-row">
           <div class="field">
             <label for="name">Name</label>
@@ -187,12 +187,27 @@
         </div>
       </form>
     </div>
+    <div id="thanks" style="display:none; text-align:center; padding:2rem; font-size:15px; color:var(--green-dark);">
+      ✓ Message sent. We'll get back to you soon.
+    </div>
   </div>
 </div>
 
 <footer>
   <span class="footer-logo">He Brothers Chess</span>
   
+<script>
+  const form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+      form.style.display = 'none';
+      document.getElementById('thanks').style.display = 'block';
+    });
+  }
+</script>
 </footer>
 </body>
 </html>
