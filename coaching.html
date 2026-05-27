@@ -96,6 +96,42 @@
   }
   .lichess-sub { font-size: 13px; color: var(--muted); }
 
+  .fit-section {
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+  }
+  .fit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  .fit-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 1.6rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .fit-name {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 0.8rem;
+  }
+  .fit-title {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--gold);
+    font-family: var(--sans);
+    font-weight: 400;
+    margin-left: 6px;
+  }
+  .fit-card p { font-size: 14px; color: var(--muted); line-height: 1.85; }
+  @media (max-width: 768px) { .fit-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -141,6 +177,20 @@
       <span class="service-icon">🏆</span>
       <div class="service-name">Tournament opportunities</div>
       <div class="service-desc">We have lots of creative tournament ideas and formats to run ourselves, best suited for students' growth and local community engagement.</div>
+    </div>
+  </div>
+  <div class="fit-section">
+    <span class="section-tag">Specializations</span>
+    <h2>Where we each fit</h2>
+    <div class="fit-grid">
+      <div class="fit-card">
+        <div class="fit-name">Daniel He <span class="fit-title">FM</span></div>
+        <p>Daniel works primarily with more advanced players. His focus on calculation, initiative, and engine-level concepts is best suited for students who already have a solid foundation and want to sharpen their game.</p>
+      </div>
+      <div class="fit-card">
+        <div class="fit-name">Samuel He <span class="fit-title">NM</span></div>
+        <p>Samuel works with beginner through intermediate players, building the structural foundation that emphasizes big picture understanding, long term planning, and pattern recognition. He also offers training games with detailed post-game analysis and annotations.</p>
+      </div>
     </div>
   </div>
   <div class="lesson-sample">
