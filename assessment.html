@@ -115,7 +115,8 @@
     gap: 1rem;
   }
   .peek-card {
-    background: var(--green-dark);
+    background: #fff;
+    border: 1px solid var(--border);
     border-radius: 8px;
     padding: 1.4rem 1.6rem;
   }
@@ -130,10 +131,10 @@
     font-family: var(--serif);
     font-size: 16px;
     font-weight: 700;
-    color: var(--gold-light);
+    color: var(--green-dark);
     margin-bottom: 0.5rem;
   }
-  .peek-desc { font-size: 13px; color: #bbb; line-height: 1.7; }
+  .peek-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
   @media (max-width: 768px) {
     .peek-grid { grid-template-columns: 1fr; }
     .peek-card:last-child { grid-column: span 1; }
@@ -155,40 +156,7 @@
 
 <div class="page">
 
-  <div class="curriculum-grid">
-    <div class="curriculum-card">
-      <div class="curriculum-title">Tactical</div>
-      <ul>
-        <li>Initiative (Forcing moves, checks, threats)</li>
-        <li>Calculation (Calculate + Evaluate)</li>
-        <li>Importance of tempo (important in sharp positions, less in static)</li>
-      </ul>
-    </div>
-    <div class="curriculum-card">
-      <div class="curriculum-title">Planning</div>
-      <ul>
-        <li>3 B's (Bases, Breaks, Better)</li>
-        <li>Prophylaxis</li>
-        <li>Imbalances</li>
-      </ul>
-    </div>
-    <div class="curriculum-card">
-      <div class="curriculum-title">Positional</div>
-      <ul>
-        <li>Piece activity</li>
-        <li>Pawn structure</li>
-        <li>Space</li>
-      </ul>
-    </div>
-    <div class="curriculum-card">
-      <div class="curriculum-title">Psychology</div>
-      <ul>
-        <li>Active Defense</li>
-        <li>Go for it mindset</li>
-        <li>Clarity</li>
-      </ul>
-    </div>
-  </div>
+
 
     <div class="peek-grid">
       <div class="peek-card">
