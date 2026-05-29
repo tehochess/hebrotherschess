@@ -6,65 +6,6 @@
 <title>Concepts — He Brothers Chess</title>
 <link rel="stylesheet" href="style.css">
 <style>
-  .assess-layout {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 4rem;
-    align-items: start;
-    margin-top: 2.5rem;
-  }
-  .assess-steps { display: flex; flex-direction: column; gap: 1.2rem; }
-  .step {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.2rem 1.4rem;
-    display: flex;
-    gap: 1.1rem;
-    align-items: flex-start;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    transition: box-shadow 0.2s;
-  }
-  .step:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.09); }
-  .step-letter {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: var(--green-mid);
-    color: var(--cream);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--serif);
-    font-size: 13px;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-  .step strong { display: block; font-size: 15px; color: var(--green-dark); margin-bottom: 3px; }
-  .step span { font-size: 13px; color: var(--muted); line-height: 1.7; }
-  .assess-aside { position: sticky; top: 80px; }
-  .aside-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.6rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  }
-  .aside-label {
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--green-mid);
-    display: block;
-    margin-bottom: 0.6rem;
-  }
-  .aside-card p { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 0.7rem; }
-  .aside-card p:last-child { margin-bottom: 0; }
-  @media (max-width: 768px) {
-    .assess-layout { grid-template-columns: 1fr; gap: 2rem; }
-    .assess-aside { position: static; }
-  }
   .curriculum-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -87,10 +28,7 @@
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--gold);
   }
-  .curriculum-card ul {
-    list-style: none;
-    padding: 0;
-  }
+  .curriculum-card ul { list-style: none; padding: 0; }
   .curriculum-card ul li {
     font-size: 14px;
     color: var(--muted);
@@ -101,44 +39,21 @@
   }
   .curriculum-card ul li:last-child { border-bottom: none; }
   .curriculum-card ul li::before { content: "–  "; color: var(--gold); }
-  @media (max-width: 768px) {
-    .curriculum-grid { grid-template-columns: 1fr; }
+  @media (max-width: 768px) { .curriculum-grid { grid-template-columns: 1fr; } }
+  .concepts-intro {
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+    max-width: 700px;
   }
-  .sneak-peek {
-    margin-top: 3.5rem;
-    padding-top: 3rem;
-    border-top: 1px solid var(--border);
+  .concepts-intro p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.85;
+    margin-bottom: 1rem;
   }
-  .peek-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .peek-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.4rem 1.6rem;
-  }
-  .peek-card:last-child {
-    grid-column: span 1;
-    background: var(--green-dark);
-    border: none;
-  }
-  .peek-card:last-child .peek-title { color: var(--gold-light); }
-  .peek-card:last-child .peek-desc { color: #bbb; }
-  .peek-title {
-    font-family: var(--serif);
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--green-dark);
-    margin-bottom: 0.5rem;
-  }
-  .peek-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
-  @media (max-width: 768px) {
-    .peek-grid { grid-template-columns: 1fr; }
-    .peek-card:last-child { grid-column: span 1; }
-  }
+  .concepts-intro p:last-child { margin-bottom: 0; }
+  .concepts-intro h2 { margin-bottom: 1rem; }
 </style>
 </head>
 <body>
@@ -155,34 +70,55 @@
 </nav>
 
 <div class="page">
+  <span class="section-tag">Curriculum</span>
+  <h1>Our 12 concepts</h1>
+  <p class="lead">Our curriculum is built around 12 core concept areas that cover the full spectrum of chess improvement. Each student's training plan is tailored to their specific weaknesses across these areas.</p>
 
+  <div class="concepts-intro">
+    <span class="section-tag">Our story</span>
+    <h2>How we arrived at these 12 concepts</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </div>
 
-
-    <div class="peek-grid">
-      <div class="peek-card">
-        <div class="peek-title">Pattern Recognition</div>
-        <div class="peek-desc">Timed puzzles across mixed themes — forks, pins, mating nets. Measures instant recognition vs. tactical blindness under pressure.</div>
-      </div>
-      <div class="peek-card">
-        <div class="peek-title">Position Evaluation</div>
-        <div class="peek-desc">Static positions, no moving pieces. Who's better and why? Identify weak squares, pawn structure, the worst piece, best plans for both sides.</div>
-      </div>
-      <div class="peek-card">
-        <div class="peek-title">Opponent Awareness</div>
-        <div class="peek-desc">What does your opponent want? How do you stop it? Tests prophylactic thinking — one of the most commonly skipped skills at every level.</div>
-      </div>
-      <div class="peek-card">
-        <div class="peek-title">Deep Problem Solving</div>
-        <div class="peek-desc">Harder puzzles requiring a move plus a full explanation. Wrong answers are as informative as right ones — the reasoning reveals specific blind spots.</div>
-      </div>
-
+  <div class="curriculum-grid">
+    <div class="curriculum-card">
+      <div class="curriculum-title">Tactical</div>
+      <ul>
+        <li>Initiative (Forcing moves, checks, threats)</li>
+        <li>Calculation (Calculate + Evaluate)</li>
+        <li>Importance of tempo (important in sharp positions, less in static)</li>
+      </ul>
+    </div>
+    <div class="curriculum-card">
+      <div class="curriculum-title">Planning</div>
+      <ul>
+        <li>3 B's (Bases, Breaks, Better)</li>
+        <li>Prophylaxis</li>
+        <li>Imbalances</li>
+      </ul>
+    </div>
+    <div class="curriculum-card">
+      <div class="curriculum-title">Positional</div>
+      <ul>
+        <li>Piece activity</li>
+        <li>Pawn structure</li>
+        <li>Patience</li>
+      </ul>
+    </div>
+    <div class="curriculum-card">
+      <div class="curriculum-title">Psychology</div>
+      <ul>
+        <li>Active Defense</li>
+        <li>Go for it mindset</li>
+        <li>Clarity</li>
+      </ul>
     </div>
   </div>
 </div>
 
 <footer>
   <span class="footer-logo">He Brothers Chess</span>
-  
 </footer>
 </body>
 </html>
