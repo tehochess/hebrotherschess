@@ -47,72 +47,20 @@
     color: var(--gold-light);
     letter-spacing: 0.5px;
   }
-  .bios {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-    margin-top: 0.5rem;
-  }
-  .bio { border-left: 3px solid var(--gold); padding-left: 1.2rem; }
-  .bio h3 { font-size: 22px; font-weight: 700; }
-  .bio-rating {
-    font-size: 11px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--green-mid);
-    margin-bottom: 0.7rem;
-    display: block;
-  }
-  .bio p { font-size: 14px; color: var(--muted); line-height: 1.8; }
-  .cred-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.9rem;
-    margin-top: 1.5rem;
-    list-style: none;
-  }
-  .cred-list li {
-    font-size: 14px;
-    color: var(--muted);
-    padding: 0.9rem 1rem;
+  .bios { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 2.5rem; }
+  .bio {
     background: #fff;
     border: 1px solid var(--border);
-    border-radius: 6px;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.6rem;
+    border-top: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 1.4rem 1.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   }
-  .cred-list li::before { content: "♟"; color: var(--gold); flex-shrink: 0; }
-  @media (max-width: 768px) {
-    .photos-grid { grid-template-columns: 1fr 1fr; }
-    .photo-wide { grid-column: span 2; aspect-ratio: 16/9; }
-    .bios { grid-template-columns: 1fr; }
-    .cred-list { grid-template-columns: 1fr; }
-  }
-  .bio-achievements {
-    list-style: none;
-    margin-top: 0.7rem;
-    padding: 0;
-  }
-  .bio-achievements li { font-weight: 500;
-    font-size: 13px;
-    color: var(--muted);
-    padding: 0.3rem 0;
-    padding-left: 1rem;
-    border-left: 2px solid var(--gold);
-    margin-bottom: 0.4rem;
-  }
-  .testimonials {
-    margin-top: 3.5rem;
-    padding-top: 3rem;
-    border-top: 1px solid var(--border);
-  }
-  .testimonial-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-    margin-top: 1.5rem;
-  }
+  .bio-rating { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.7rem; display: block; }
+  .bio-achievements { list-style: none; margin-top: 0.7rem; padding: 0; }
+  .bio-achievements li { font-size: 13px; color: var(--muted); padding: 0.3rem 0; padding-left: 1rem; border-left: 2px solid var(--gold); margin-bottom: 0.4rem; font-weight: 500; }
+  .testimonials { margin-top: 3.5rem; padding-top: 3rem; border-top: 1px solid var(--border); }
+  .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.5rem; }
   .testimonial-card {
     background: #fff;
     border: 1px solid var(--border);
@@ -121,64 +69,13 @@
     padding: 1.6rem;
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   }
-  .testimonial-text {
-    font-family: var(--sans);
-    font-size: 14px;
-    color: var(--text);
-    line-height: 1.85;
-    margin-bottom: 1rem;
-    font-style: normal;
-  }
-  .testimonial-author {
-    font-size: 12px;
-    color: var(--green-mid);
-    letter-spacing: 0.5px;
-    font-weight: 600;
-  }
+  .testimonial-text { font-family: var(--sans); font-size: 14px; color: var(--text); line-height: 1.85; margin-bottom: 1rem; font-style: normal; }
+  .testimonial-author { font-size: 12px; color: var(--green-mid); letter-spacing: 0.5px; font-weight: 600; }
   @media (max-width: 768px) {
+    .photos-grid { grid-template-columns: 1fr 1fr; }
+    .photo-wide { grid-column: span 2; aspect-ratio: 16/9; }
+    .bios { grid-template-columns: 1fr; }
     .testimonial-grid { grid-template-columns: 1fr; }
-  }
-  .coaching-style {
-    margin-top: 3.5rem;
-    padding-top: 3rem;
-    border-top: 1px solid var(--border);
-    margin-bottom: 3.5rem;
-  }
-  .style-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-  }
-  .style-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-top: 3px solid var(--gold);
-    border-radius: 8px;
-    padding: 1.6rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  }
-  .style-name {
-    font-family: var(--serif);
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--green-dark);
-    margin-bottom: 3px;
-  }
-  .style-title {
-    font-size: 11px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1rem;
-  }
-  .style-card p {
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.85;
-  }
-  @media (max-width: 768px) {
-    .style-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -197,23 +94,7 @@
 
 <div class="page">
   <span class="section-tag">About us</span>
-  <h1>Structured training for the serious chess improver.</h1>
-  <p class="lead">Daniel and Samuel He are identical twins from the Seattle area. They each achieved the National Master title at the start of high school through the local tournament circuit, the same scene many of their students are part of. They coached the Redmond High School chess team to the 2017 State Championship and a top-5 finish at Super Nationals. Most recently, Daniel became the 2024 Washington State Champion and achieved the FIDE Master title. They hope to share their passion for chess with others, whether nurturing up and coming prodigies or serious adult improvers.</p>
-
-  <div class="photos-grid">
-    <div class="photo-wrap photo-tall">
-      <img src="Photo1.jpg" alt="Samuel He with trophy">
-      <div class="photo-caption">Daniel — 2024 WA State Champion</div>
-    </div>
-    <div class="photo-wrap photo-tall">
-      <img src="photo2.jpg" alt="Daniel He with trophy">
-      <div class="photo-caption">Samuel — WA High School Team Trophy</div>
-    </div>
-    <div class="photo-wrap photo-wide">
-      <img src="photo3.jpg" alt="He Brothers over the board">
-      <div class="photo-caption">He Brothers in action</div>
-    </div>
-  </div>
+  <h1>He Brothers Chess</h1>
 
   <div class="bios">
     <div class="bio">
@@ -237,11 +118,27 @@
     </div>
   </div>
 
+  <p class="lead">Daniel and Samuel He are identical twins from the Seattle area. They each achieved the National Master title at the start of high school through the local tournament circuit, the same scene many of their students are part of. They coached the Redmond High School chess team to the 2017 State Championship and a top-5 finish at Super Nationals. Most recently, Daniel became the 2024 Washington State Champion and achieved the FIDE Master title. They hope to share their passion for chess with others, whether nurturing up and coming prodigies or serious adult improvers.</p>
+
+  <div class="photos-grid">
+    <div class="photo-wrap photo-tall">
+      <img src="photo2.jpg" alt="Daniel He with trophy">
+      <div class="photo-caption">Daniel — 2024 WA State Champion</div>
+    </div>
+    <div class="photo-wrap photo-tall">
+      <img src="Photo1.jpg" alt="Samuel He with trophy">
+      <div class="photo-caption">Samuel — WA High School Team Trophy</div>
+    </div>
+    <div class="photo-wrap photo-wide">
+      <img src="photo3.jpg" alt="He Brothers over the board">
+      <div class="photo-caption">He Brothers in action</div>
+    </div>
+  </div>
 
   <div class="testimonials">
     <span class="section-tag">Student testimonials</span>
     <h2>What our students say</h2>
-<div class="testimonial-grid">
+    <div class="testimonial-grid">
       <div class="testimonial-card">
         <div class="testimonial-text">"My US Chess Federation rating had bounced around the 1100s for years before starting lessons with Sam. Within a few months of our weekly lessons I was able to push my regular rating over 1400. Rather than the cascade of complex analysis other titled players have given me, Sam has a knack for recognizing where his student's understanding is and he meets them there. His instruction is consistent and each lesson always builds on the last. Repeated mistakes on my part were met with patient reminders rather than frustration as he guided me first to recognize imbalances on the board and then improve my ability to translate what those imbalances were telling me to do next."</div>
         <div class="testimonial-author">— Adam, Missouri · student since 2024</div>
@@ -260,11 +157,11 @@
       </div>
     </div>
   </div>
+
 </div>
 
 <footer>
   <span class="footer-logo">He Brothers Chess</span>
-  
 </footer>
 </body>
 </html>
